@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+	int a = 0, g = 205727, cfzy = 0;
+
+	for (a = 0; a < 20; a++)
+	{
+ 		g *= (1 + 0.05);
+		cfzy += g;
+	}
+	if (a == 20)
+	printf("若40岁退休达到财富自由需赚取金额为：%d\n", cfzy);
+		
+}
