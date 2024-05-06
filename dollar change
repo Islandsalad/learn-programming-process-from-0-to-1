@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	double  loan =0, rate =0, monthly_payment =0;
+	double  first_payment = 0, second_payment = 0, third_payment = 0, monthly_rate = 0;
+	printf("enter amount of loan:");
+	scanf_s("%lf", &loan);
+	printf("enter interest rate:");
+	scanf_s("%lf", &rate);
+	printf("enter monthly_payment:");
+	scanf_s("%lf", &monthly_payment);
+	monthly_rate = rate / 12.0l / 100.0l;
+	first_payment = (loan - (monthly_payment- (loan * monthly_rate)));
+	second_payment = (first_payment - (monthly_payment - (first_payment * monthly_rate)));
+	third_payment = (second_payment - (monthly_payment - (second_payment * monthly_rate)));
+	printf("balance remaining after first payment:%.2lf\n", first_payment);
+	printf("balance remaining after second payment:%.2lf\n", second_payment);
+	printf("balance remaining after third payment:%.2lf", third_payment);
+		return 0;
+}
